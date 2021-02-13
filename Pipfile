@@ -7,6 +7,10 @@ name = "pypi"
 flask = "*"
 frozen-flask = "*"
 flask-bootstrap = "*"
+flask-nav = "*"
+markdown = "*"
+pygments = "*"
+flask-flatpages = "*"
 
 [dev-packages]
 
