@@ -5,10 +5,14 @@ from flask_bootstrap import Bootstrap
 from flask_nav import Nav
 from flask_nav.elements import *
 
+
+app = Flask(__name__)
+
+app.config.from_pyfile('carina_config.cfg')
+pages = FlatPages(app)
 nav = Nav()
 
 
-app = Flask(__name__)
 
 ## Nav Bar Elements
 topbar = Navbar('',
