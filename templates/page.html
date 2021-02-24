@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+
+    <h4> {{ page.title }} </h4>
+    <p> Author: {{ page.author }} </p>
+    <p> Publication Date: {{ page.date }} </p>
+
+    <a> This is content in the page </a>
+
+    {{ page.html|safe }}
+
+{% endblock %}

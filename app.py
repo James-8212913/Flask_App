@@ -1,30 +1,40 @@
-import markdown, pygments
-from flask import Flask, render_template, render_template_string
-from flask_flatpages import FlatPages, pygmented_markdown, pygments_style_defs
-from flask_bootstrap import Bootstrap
-from flask_nav import Nav
-from flask_nav.elements import *
+import sys, os
+from flask import Flask, render_template
+from flask_flatpages import FlatPages
 
+# Some configuration, ensures
+# 1. Pages are loaded on request.
+# 2. File name extension for pages is Markdown.
+DEBUG = True
+FLATPAGES_AUTO_RELOAD = DEBUG
+FLATPAGES_EXTENSION = '.md'
 
 app = Flask(__name__)
-
-app.config.from_pyfile('carina_config.cfg')
+app.config.from_object(__name__)
 pages = FlatPages(app)
-nav = Nav()
+
+# URL Routing - Home Page
+@app.route("/")
+def home():
+    return render_template("base.html")
 
 
+@app.route('/articles')
+def articles():
+    return render_template('articles.html', pages=pages)
 
-## Nav Bar Elements
-topbar = Navbar('',
-    View('Home', 'index'),
-)
-
-nav.register_element('top', topbar)
-
-bootstrap = Bootstrap(app)
-
-@app.route('/')
-def index():
+@app.route('/references')
+def references():
     return render_template('base.html')
 
-nav.init_app(app)
+# URL Routing - Flat Pages
+# Retrieves the page path and renders the template with metadata if requested
+@app.route("/articles/<path:path>/")
+def page(path):
+    page = pages.get_or_404(path)
+    return render_template('page.html', page=page)
+
+
+# Main Function, Runs at http://0.0.0.0:8000
+if __name__ == "__main__":
+    app.run(port=8000)
