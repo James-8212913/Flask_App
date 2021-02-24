@@ -1,27 +1,29 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h2>Posts</h2>
+  <h2>references</h2>
       <div class="table_responsive">
         <div class="table table-sm table-borderless mb-0">
           <table class="table">
             <thead>
               <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Article Name</th>
+                <th scope="col">Reference</th>
+                <th scope="col">Author</th>
                 <th scope="col">Description</th>
               </tr>
             </thead>
             <ul>
-                {% for page in pages %}
                 <tr>
-                  <td> <a>{{page.date}}</a>
-                  <td> <a href="{{ url_for('page', path = page.path)}}" </a>{{page.title}}</td>
-                  <td> <a>{{page.description}}</a> </td>
+                  <td> <a>##</a> </td>
+                  <td> <a>##</a> </td>
+                  <td> <a>##</a> </td>
                 </tr>
-                {% endfor %}
             </ul>
           </table>
         </div>
       </div>
 {% endblock content %}
+
+<h1> References </h1>
+
+This is a list of References

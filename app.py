@@ -19,13 +19,13 @@ def home():
     return render_template("base.html")
 
 
-@app.route('/articles')
+@app.route('/articles/')
 def articles():
     return render_template('articles.html', pages=pages)
 
-@app.route('/references')
+@app.route('/references/')
 def references():
-    return render_template('base.html')
+    return render_template('references.html')
 
 # URL Routing - Flat Pages
 # Retrieves the page path and renders the template with metadata if requested
