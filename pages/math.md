@@ -1,11 +1,11 @@
-title: AI
+title: Basic Math
 author: James
-date: 21/02/24
-description: This is a quick note on AI
+date: 22/10/06
+description: This is a quick page on some foundational maths
 
 
 
-# This is a page on AI
+# Maths Really Matters
 
 Let's see if this will register.. will this update automatically?
 
