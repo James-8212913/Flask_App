@@ -7,6 +7,7 @@ from flask_flatpages import FlatPages
 # 2. File name extension for pages is Markdown.
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
+TEMPLATES_AUTO_RELOAD = True
 FLATPAGES_EXTENSION = '.md'
 
 app = Flask(__name__)
