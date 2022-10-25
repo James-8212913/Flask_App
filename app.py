@@ -14,11 +14,11 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 pages = FlatPages(app)
 
+
 # URL Routing - Home Page
 @app.route("/")
 def home():
     return render_template("base.html")
-
 
 @app.route('/articles/')
 def articles():
