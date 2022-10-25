@@ -2,7 +2,8 @@
 
 header {
   background-image: url('../static/img/ducks_bw.png');
-  min-height: 15pc;
+  background-size: cover;
+  min-height: 20pc;
   text-align: center;
   font-size: 4rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
