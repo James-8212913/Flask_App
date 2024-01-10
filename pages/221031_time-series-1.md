@@ -9,7 +9,7 @@ In this article we cover time series and some of the key concepts that underpin 
 
 To consider the different elements of time series data we will look at the rainfall for Sydney, NSW Australia, Figure 1 is a simple time series plot of the rainfall over time. 
 
-![Image 1](images/rain_time.png "Figure 1")
+![Image 1](/static/images/rain_time_timeseries.png "Figure 1")
 
 As you can see there isn't any real pattern immediately on the top chart, when we group the rainfall by year and take the average we begin to see when the wet years were in Sydney.
 
